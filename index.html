@@ -5,38 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.scss">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
     <title>Ohmyfood</title>
 </head>
 <body>
     <header>
-        <div>
-            <h1>Ohmyfood</h1>
+        <div class="title">
+            <img src="./images/logo/ohmyfood.png" alt="logo">
         </div>
-        <div>
+        <div class="subtitle">
+            <i id="localisationLogo" class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
         </div>
         
     </header>
 
     <section>
+        <h2 class="disabled">o</h2>
         <aside id="reservation">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button>Explorer nos restaurants</button>
         </aside>
 
-        <aside id="functionality">
+        <aside class="functionality">
+            <h2>Fonctionnement</h2>
             <ul>
-                <li>
-                    <span>image</span>
+                <li class="functionality__list">
+                    <span class="functionality__list--numero">1</span>
+                    <span><i class="fas fa-mobile-alt"></i></span>
                     <span>Choisissez un restaurant</span>
                 </li>
-                <li>
-                    <span>image</span>
+                <li class="functionality__list">
+                    <span class="functionality__list--numero">2</span>
+                    <span><i class="fas fa-list-ul"></i></span>
                     <span>Composez votre menu</span>
                 </li>
-                <li>
-                    <span>image</span>
+                <li class="functionality__list">
+                    <span class="functionality__list--numero">3</span>
+                    <span><i class="fas fa-store"></i></span>
                     <span>Dégustez au restautant</span>
                 </li>
             </ul>
