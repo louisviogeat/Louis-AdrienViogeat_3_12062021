@@ -1,0 +1,97 @@
+.-primary {
+  background-color: #9356DC;
+}
+
+.disabled {
+  display: none;
+}
+
+.title, .subtitle, #reservation {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  object-fit: cover;
+}
+
+#logo {
+  height: 60%;
+}
+
+.subtitle {
+  align-items: center;
+  background-color: #d1d0d0;
+}
+
+#localisationLogo {
+  width: 30px;
+}
+
+#reservation {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 10%;
+  background-color: #e6e4e4;
+}
+
+.btn {
+  height: 50px;
+  border: none;
+}
+.btn-rounded {
+  border-radius: 30px;
+}
+
+.functionality {
+  display: flex;
+  flex-direction: column;
+}
+.functionality__list {
+  align-items: center;
+  list-style: none;
+}
+.functionality__list--numero {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 10px;
+  width: 300px;
+}
+.functionality ul {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#restaurant {
+  background-color: #eeebeb;
+}
+
+.vignette {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 5%;
+  border-radius: 20px;
+}
+.vignette__image {
+  height: 60%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

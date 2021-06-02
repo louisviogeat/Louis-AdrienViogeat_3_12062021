@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.scss">
+    <link rel="stylesheet" href="/public/css/style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <title>Ohmyfood</title>
 </head>
 <body>
     <header>
         <div class="title">
-            <img src="./images/logo/ohmyfood.png" alt="logo">
+            <img id="logo" src="./images/logo/ohmyfood.png" alt="logo">
         </div>
         <div class="subtitle">
             <i id="localisationLogo" class="fas fa-map-marker-alt"></i>
@@ -25,7 +25,7 @@
         <aside id="reservation">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <button class="btn btn-rounded -primary">Explorer nos restaurants</button>
         </aside>
 
         <aside class="functionality">
@@ -50,11 +50,12 @@
         </aside>
 
         <aside id="restaurant">
+            <h2>Restaurants</h2>
             <article class="vignette">
-                <p>image</p>
-                <h3>La palette du goût</h3>
-                <p>Ménilmontant</p>
-                <p>logo coeur</p>
+                <img class="vignette__image" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                <h3 class="vignette__titre">La palette du goût</h3>
+                <p class="vignette__description">Ménilmontant</p>
+                <p class="vignette__logo">logo coeur</p>
             </article>
             <article class="vignette">
                 <p>image</p>
