@@ -1,10 +1,6 @@
 @import "./utils/variables";
 @import "./components/buttons";
 
-.disabled {
-    display: none;
-}
-
 .title, .subtitle, #reservation {
     display: flex;
     justify-content: center;
