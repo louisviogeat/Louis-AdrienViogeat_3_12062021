@@ -2,6 +2,15 @@
   background-color: #9356DC;
 }
 
+.btn {
+  height: 50px;
+  border: none;
+  color: white;
+}
+.btn-rounded {
+  border-radius: 30px;
+}
+
 .disabled {
   display: none;
 }
@@ -42,34 +51,27 @@ img {
   background-color: #e6e4e4;
 }
 
-.btn {
-  height: 50px;
-  border: none;
-}
-.btn-rounded {
-  border-radius: 30px;
-}
-
 .functionality {
   display: flex;
   flex-direction: column;
 }
 .functionality__list {
-  align-items: center;
   list-style: none;
+  display: flex;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0px 4px 15px 0px #A0A0A0;
+  width: 90%;
+  margin-left: 0;
+  border-radius: 20px;
+  justify-content: space-around;
 }
 .functionality__list--numero {
+  text-align: center;
   background-color: #9356DC;
   color: white;
   border-radius: 10px;
-  width: 300px;
-}
-.functionality ul {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  width: 18px;
 }
 
 #restaurant {
@@ -92,6 +94,20 @@ img {
   width: 100%;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
+}
+.vignette__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+footer {
+  background-color: #504f4f;
+}
+
+footer img {
+  height: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
