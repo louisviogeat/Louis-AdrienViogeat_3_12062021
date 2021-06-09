@@ -1,9 +1,11 @@
+@import "../utils/variables";
+
 .btn {
     height: 50px;
     border: none;
     color: white;
-    &-rounded {
-        border-radius: 30px;
-    }
+    border-radius: 30px;
+    background: linear-gradient($-secondary, $-primary);
+    padding: 5%;
 
 }

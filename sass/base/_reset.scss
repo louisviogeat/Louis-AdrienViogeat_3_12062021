@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/police/roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('/police/shrikhand/Shrikhand-Regular.otf');
+}
+
+img {
+    object-fit: cover;
+}
+
+.title, .subtitle, #reservation {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.logo, .title {
+    font-family: 'Shrikhand';
+}
+
+p {
+    color: rgb(78, 77, 77);
+}
+
+.fas, .far {
+    font-size: x-large;
+    color: rgb(119, 118, 118);
+}

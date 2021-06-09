@@ -1,3 +1,37 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/police/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/police/shrikhand/Shrikhand-Regular.otf");
+}
+img {
+  object-fit: cover;
+}
+
+.title, .subtitle, #reservation {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.logo, .title {
+  font-family: "Shrikhand";
+}
+
+p {
+  color: #4e4d4d;
+}
+
+.fas, .far {
+  font-size: x-large;
+  color: #777676;
+}
+
 .-primary {
   background-color: #9356DC;
 }
@@ -6,50 +40,27 @@
   height: 50px;
   border: none;
   color: white;
-}
-.btn-rounded {
   border-radius: 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 5%;
 }
 
-.title, .subtitle, #reservation {
-  display: flex;
-  justify-content: center;
+footer {
+  background-color: #504f4f;
+  color: azure;
+}
+footer li {
+  list-style: none;
 }
 
-.title {
-  height: 50px;
-  display: flex;
-  align-items: center;
-}
-
-img {
-  object-fit: cover;
-}
-
-#logo {
-  height: 60%;
-}
-
-.subtitle {
-  align-items: center;
-  background-color: #d1d0d0;
-}
-
-#localisationLogo {
-  width: 30px;
-}
-
-#reservation {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5% 10%;
-  background-color: #e6e4e4;
+.-primary {
+  background-color: #9356DC;
 }
 
 .functionality {
   display: flex;
   flex-direction: column;
+  margin: 0 5% 0 5%;
 }
 .functionality__list {
   list-style: none;
@@ -58,35 +69,62 @@ img {
   margin: 10px;
   box-shadow: 0px 4px 15px 0px #A0A0A0;
   width: 90%;
+  height: 40px;
   margin-left: 0;
   border-radius: 20px;
   justify-content: space-around;
+  align-items: center;
+  background-color: #f8f4ef;
 }
-.functionality__list--numero {
+.functionality__list::before {
+  content: "1";
   text-align: center;
   background-color: #9356DC;
   color: white;
-  border-radius: 10px;
-  width: 18px;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  left: 4%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.functionality__list:hover {
+  background-color: #e4d5f6;
 }
 
-#restaurant {
-  background-color: #eeebeb;
+.title {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 60%;
+}
+
+.subtitle {
+  align-items: center;
+  background-color: #e7e0da;
+}
+
+#localisationLogo {
+  width: 30px;
 }
 
 .vignette {
-  width: 90%;
   height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
-  margin: 5%;
+  margin-bottom: 5%;
   border-radius: 20px;
 }
 .vignette__image {
-  height: 60%;
+  height: 70%;
   width: 100%;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
@@ -94,16 +132,29 @@ img {
 .vignette__bottom {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-between;
+  width: 90%;
 }
 
-footer {
-  background-color: #504f4f;
+#reservation {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 10%;
+  background-color: #f8f4ef;
+  text-align: center;
 }
 
-footer img {
-  height: 15px;
+#restaurant {
+  background-color: #e7e5e4;
+  padding: 5%;
+}
+#restaurant h2 {
+  margin: 5%;
+}
+
+.-primary {
+  background-color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
