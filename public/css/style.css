@@ -133,7 +133,15 @@ footer li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+article a {
+  text-decoration: none;
+  color: unset;
+  height: 100%;
+  width: 100%;
 }
 
 #reservation {
@@ -151,6 +159,14 @@ footer li {
 }
 #restaurant h2 {
   margin: 5%;
+}
+
+.imgRestaurant {
+  width: 100%;
+}
+.imgRestaurant img {
+  object-fit: cover;
+  height: 300px;
 }
 
 .-primary {

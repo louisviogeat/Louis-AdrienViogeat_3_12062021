@@ -17,6 +17,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
+}
+
+article a {
+    text-decoration: none;
+    color: unset;
+    height: 100%;
+    width: 100%;
 }
