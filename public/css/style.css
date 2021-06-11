@@ -163,10 +163,62 @@ article a {
 
 .imgRestaurant {
   width: 100%;
+  margin: 0;
+  z-index: 2;
 }
 .imgRestaurant img {
   object-fit: cover;
-  height: 300px;
+  width: 100%;
+  margin: 0;
+}
+
+.restaurant {
+  background-color: #e7e4e4;
+  border-radius: 30px;
+  margin-top: -30px;
+  z-index: 1;
+  padding: 5%;
+}
+.restaurant__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.restaurant__menu h3::before {
+  border-bottom: 2px solid green;
+}
+.restaurant__menu--list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+.restaurant__menu--name {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  padding: 2% 5% 0 5%;
+  height: 60px;
+  justify-content: center;
+}
+.restaurant__menu--name h4, .restaurant__menu--name h5 {
+  margin: 0 0 0 0;
+}
+.restaurant__menu--name--description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+.restaurant__menu--name--description p {
+  font-weight: bold;
 }
 
 .-primary {
