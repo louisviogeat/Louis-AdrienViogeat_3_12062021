@@ -19,7 +19,8 @@ img {
 
 body {
     font-family: 'Roboto';
-
+    counter-reset: section;
+    margin: 0 0 0 0;
 }
 
 .logo, .title {

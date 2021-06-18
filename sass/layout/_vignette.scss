@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 .vignette {
     height: 300px;
     display: flex;
@@ -19,6 +21,21 @@
         justify-content: space-between;
         margin-left: 5%;
         margin-right: 5%;
+        &--heart {
+            margin-right: 5%;
+            & .far, .fas {
+                position: absolute;
+            }
+            & .fas {
+                opacity: 0;
+                color: $-secondary;
+                &:hover {
+                    opacity: 1;
+                    animation: heart 400ms;
+                }
+            }
+
+        }
     }
 }
 

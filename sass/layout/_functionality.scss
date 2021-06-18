@@ -1,5 +1,7 @@
 @import "../utils/variables";
 
+
+
 .functionality {
     display: flex;
     flex-direction: column;
@@ -18,14 +20,15 @@
         align-items: center;
         background-color: rgb(248, 244, 239);
         &::before {
-            content: "1";
+            counter-increment: section;
+            content: counter(section);
             text-align: center;
             background-color: $-primary;
             color: white;
             border-radius: 30px;
             width: 30px;
             height: 30px;
-            left: 4%;
+            left: 2%;
             position: absolute;
             display: flex;
             align-items: center;

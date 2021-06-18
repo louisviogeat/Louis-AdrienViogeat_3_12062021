@@ -17,6 +17,8 @@ img {
 
 body {
   font-family: "Roboto";
+  counter-reset: section;
+  margin: 0 0 0 0;
 }
 
 .logo, .title {
@@ -36,6 +38,23 @@ p {
   background-color: #9356DC;
 }
 
+@keyframes heart {
+  from {
+    color: unset;
+  }
+  25% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: #d7c0f2;
+  }
+  to {
+    color: linear-gradient(#FF79DA, #9356DC);
+  }
+}
 .btn {
   height: 50px;
   border: none;
@@ -57,6 +76,23 @@ footer li {
   background-color: #9356DC;
 }
 
+@keyframes heart {
+  from {
+    color: unset;
+  }
+  25% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: #d7c0f2;
+  }
+  to {
+    color: linear-gradient(#FF79DA, #9356DC);
+  }
+}
 .functionality {
   display: flex;
   flex-direction: column;
@@ -77,14 +113,15 @@ footer li {
   background-color: #f8f4ef;
 }
 .functionality__list::before {
-  content: "1";
+  counter-increment: section;
+  content: counter(section);
   text-align: center;
   background-color: #9356DC;
   color: white;
   border-radius: 30px;
   width: 30px;
   height: 30px;
-  left: 4%;
+  left: 2%;
   position: absolute;
   display: flex;
   align-items: center;
@@ -113,6 +150,27 @@ footer li {
   width: 30px;
 }
 
+.-primary {
+  background-color: #9356DC;
+}
+
+@keyframes heart {
+  from {
+    color: unset;
+  }
+  25% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: #d7c0f2;
+  }
+  to {
+    color: linear-gradient(#FF79DA, #9356DC);
+  }
+}
 .vignette {
   height: 300px;
   display: flex;
@@ -135,6 +193,20 @@ footer li {
   justify-content: space-between;
   margin-left: 5%;
   margin-right: 5%;
+}
+.vignette__bottom--heart {
+  margin-right: 5%;
+}
+.vignette__bottom--heart .far, .vignette__bottom--heart .fas {
+  position: absolute;
+}
+.vignette__bottom--heart .fas {
+  opacity: 0;
+  color: #FF79DA;
+}
+.vignette__bottom--heart .fas:hover {
+  opacity: 1;
+  animation: heart 400ms;
 }
 
 article a {
@@ -161,6 +233,27 @@ article a {
   margin: 5%;
 }
 
+.-primary {
+  background-color: #9356DC;
+}
+
+@keyframes heart {
+  from {
+    color: unset;
+  }
+  25% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: #d7c0f2;
+  }
+  to {
+    color: linear-gradient(#FF79DA, #9356DC);
+  }
+}
 .imgRestaurant {
   width: 100%;
   margin: 0;
@@ -172,12 +265,28 @@ article a {
   margin: 0;
 }
 
+h3 {
+  text-transform: uppercase;
+}
+h3:after {
+  display: block;
+  content: "";
+  border: 2px solid #99E2D0;
+  width: 15%;
+}
+
 .restaurant {
-  background-color: #e7e4e4;
+  background-color: #f1f1f1;
   border-radius: 30px;
   margin-top: -30px;
+  position: relative;
   z-index: 1;
   padding: 5%;
+}
+.restaurant::after {
+  content: "";
+  background-color: greenyellow;
+  width: 20%;
 }
 .restaurant__title {
   display: flex;
@@ -189,40 +298,51 @@ article a {
   flex-direction: column;
   justify-content: space-around;
 }
-.restaurant__menu h3::before {
-  border-bottom: 2px solid green;
-}
 .restaurant__menu--list {
   display: flex;
   flex-direction: column;
   margin-bottom: 5%;
 }
-.restaurant__menu--name {
+.restaurant__menu--plate {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: white;
   border-radius: 20px;
   margin-bottom: 5%;
   padding: 2% 5% 0 5%;
   height: 60px;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
-.restaurant__menu--name h4, .restaurant__menu--name h5 {
+.restaurant__menu--plate h4, .restaurant__menu--plate h5 {
   margin: 0 0 0 0;
 }
-.restaurant__menu--name--description {
+
+.command {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0;
-}
-.restaurant__menu--name--description p {
-  font-weight: bold;
+  justify-content: center;
 }
 
 .-primary {
   background-color: #9356DC;
+}
+
+@keyframes heart {
+  from {
+    color: unset;
+  }
+  25% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: #d7c0f2;
+  }
+  to {
+    color: linear-gradient(#FF79DA, #9356DC);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
