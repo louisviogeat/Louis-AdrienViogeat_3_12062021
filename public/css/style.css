@@ -40,19 +40,10 @@ p {
 
 @keyframes heart {
   from {
-    color: unset;
-  }
-  25% {
-    color: white;
-  }
-  50% {
-    color: white;
-  }
-  75% {
-    color: #d7c0f2;
+    opacity: 0;
   }
   to {
-    color: linear-gradient(#FF79DA, #9356DC);
+    opacity: 1;
   }
 }
 .btn {
@@ -78,19 +69,10 @@ footer li {
 
 @keyframes heart {
   from {
-    color: unset;
-  }
-  25% {
-    color: white;
-  }
-  50% {
-    color: white;
-  }
-  75% {
-    color: #d7c0f2;
+    opacity: 0;
   }
   to {
-    color: linear-gradient(#FF79DA, #9356DC);
+    opacity: 1;
   }
 }
 .functionality {
@@ -156,19 +138,10 @@ footer li {
 
 @keyframes heart {
   from {
-    color: unset;
-  }
-  25% {
-    color: white;
-  }
-  50% {
-    color: white;
-  }
-  75% {
-    color: #d7c0f2;
+    opacity: 0;
   }
   to {
-    color: linear-gradient(#FF79DA, #9356DC);
+    opacity: 1;
   }
 }
 .vignette {
@@ -202,11 +175,16 @@ footer li {
 }
 .vignette__bottom--heart .fas {
   opacity: 0;
-  color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .vignette__bottom--heart .fas:hover {
   opacity: 1;
-  animation: heart 400ms;
+  animation: heart 1000ms;
+}
+.vignette__bottom--heart .far:hover {
+  opacity: 0;
 }
 
 article a {
@@ -239,19 +217,10 @@ article a {
 
 @keyframes heart {
   from {
-    color: unset;
-  }
-  25% {
-    color: white;
-  }
-  50% {
-    color: white;
-  }
-  75% {
-    color: #d7c0f2;
+    opacity: 0;
   }
   to {
-    color: linear-gradient(#FF79DA, #9356DC);
+    opacity: 1;
   }
 }
 .imgRestaurant {
@@ -265,16 +234,6 @@ article a {
   margin: 0;
 }
 
-h3 {
-  text-transform: uppercase;
-}
-h3:after {
-  display: block;
-  content: "";
-  border: 2px solid #99E2D0;
-  width: 15%;
-}
-
 .restaurant {
   background-color: #f1f1f1;
   border-radius: 30px;
@@ -283,10 +242,14 @@ h3:after {
   z-index: 1;
   padding: 5%;
 }
-.restaurant::after {
+.restaurant h3 {
+  text-transform: uppercase;
+}
+.restaurant h3:after {
+  display: block;
   content: "";
-  background-color: greenyellow;
-  width: 20%;
+  border: 2px solid #99E2D0;
+  width: 15%;
 }
 .restaurant__title {
   display: flex;
@@ -329,19 +292,10 @@ h3:after {
 
 @keyframes heart {
   from {
-    color: unset;
-  }
-  25% {
-    color: white;
-  }
-  50% {
-    color: white;
-  }
-  75% {
-    color: #d7c0f2;
+    opacity: 0;
   }
   to {
-    color: linear-gradient(#FF79DA, #9356DC);
+    opacity: 1;
   }
 }
 

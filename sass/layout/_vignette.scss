@@ -28,11 +28,16 @@
             }
             & .fas {
                 opacity: 0;
-                color: $-secondary;
+                background: $-gradient;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
                 &:hover {
                     opacity: 1;
-                    animation: heart 400ms;
+                    animation: heart 1000ms;
                 }
+            }
+            & .far:hover {
+                opacity: 0;
             }
 
         }

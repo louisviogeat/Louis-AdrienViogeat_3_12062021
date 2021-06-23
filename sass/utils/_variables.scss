@@ -10,18 +10,9 @@ $-gradient : linear-gradient($-secondary, $-primary);
 
 @keyframes heart {
     from {
-        color: unset;
-    }
-    25% {
-        color: lighten($-primary, $amount: 75%) 
-    }
-    50% {
-        color: lighten($-primary, $amount: 50%) 
-    }
-    75% {
-        color: lighten($-primary, $amount: 25%) 
+        opacity: 0;
     }
     to {
-        color: $-gradient;
+        opacity: 1;
     }
 }
