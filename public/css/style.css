@@ -56,11 +56,20 @@ p {
 }
 
 footer {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
   background-color: #504f4f;
   color: azure;
 }
+footer h3 {
+  margin-left: 10%;
+}
 footer li {
   list-style: none;
+}
+footer .fas {
+  font-size: small;
+  color: white;
 }
 
 .-primary {
@@ -234,6 +243,13 @@ article a {
   margin: 0;
 }
 
+header .title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "a img .";
+  margin: 5%;
+}
+
 .restaurant {
   background-color: #f1f1f1;
   border-radius: 30px;
@@ -241,6 +257,9 @@ article a {
   position: relative;
   z-index: 1;
   padding: 5%;
+}
+.restaurant h2 {
+  font-weight: normal;
 }
 .restaurant h3 {
   text-transform: uppercase;
@@ -272,13 +291,48 @@ article a {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 5%;
-  padding: 2% 5% 0 5%;
+  padding: 0 0 0 2%;
   height: 60px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  /*
+  &--choice {
+      background-color: $-tertiary;
+      border-radius: 0 20px 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 20%;
+      &:hover {
+          display: flex;
+      }
+      i {
+          color: white;
+      }
+  }
+  */
 }
 .restaurant__menu--plate h4, .restaurant__menu--plate h5 {
   margin: 0 0 0 0;
+}
+.restaurant__menu--plate--title {
+  width: 80%;
+}
+.restaurant__menu--plate p {
+  margin-right: 3%;
+}
+.restaurant__menu--plate:hover:after {
+  display: block;
+  content: "";
+  background: url("/images/logo/check-circle-solid.svg") no-repeat;
+  background-size: 30%;
+  background-position: 50%;
+  background-color: #99E2D0;
+  border: 2px solid #99E2D0;
+  border-radius: 0 20px 20px 0;
+  width: 15%;
+  height: 100%;
 }
 
 .command {
