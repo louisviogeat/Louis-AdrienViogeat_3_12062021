@@ -14,3 +14,42 @@
       margin: 5%;  
     }
 }
+
+@keyframes loading {
+  to {
+    transform: rotate(8turn);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0.5;
+    background: darken($color: whitesmoke, $amount: 30%);
+  }
+  90% {
+    opacity: 0.5;
+    background: darken($color: whitesmoke, $amount: 30%);
+  }
+  100% {
+    opacity: 0;
+    background: none;
+  }
+}
+
+.home {
+  animation: opacity 5s;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  &::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid white;
+    border-top-color: green;
+    border-radius: 50%;
+    animation: loading 5s ease-in-out;
+  }
+}
