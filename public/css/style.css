@@ -47,7 +47,6 @@ p {
     opacity: 1;
   }
 }
-
 @keyframes select {
   from {
     width: 0%;
@@ -75,18 +74,19 @@ p {
     display: block;
   }
 }
-
 @keyframes shadow-drop-center {
   0% {
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
+  1% {
+    background: #ff93e1;
+  }
   100% {
     background: #ff93e1;
     -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-
   }
 }
 .btn {
@@ -99,7 +99,7 @@ p {
   font-weight: bold;
 }
 .btn:hover {
-  animation: shadow-drop-center 400ms;
+  animation: shadow-drop-center 1000ms;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
   background: #ff93e1;
 }
@@ -208,6 +208,7 @@ footer .fas {
 
 #logo {
   height: 60%;
+  margin-left: 25%;
 }
 
 .subtitle {
@@ -326,8 +327,16 @@ article a {
 }
 
 @keyframes loading {
-  to {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
     transform: rotate(8turn);
+    opacity: 1;
+    width: 50px;
+    height: 50px;
   }
 }
 @keyframes opacity {
@@ -345,7 +354,7 @@ article a {
   }
 }
 .home {
-  animation: opacity 5s;
+  animation: opacity 1s;
 }
 
 .loading {
@@ -354,12 +363,13 @@ article a {
 }
 .loading::after {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 0px;
+  height: 0px;
   border: 10px solid white;
-  border-top-color: green;
+  border-top-color: #9356DC;
   border-radius: 50%;
-  animation: loading 5s ease-in-out;
+  animation: loading 1s ease-in-out;
+  opacity: 0;
 }
 
 .-primary {
@@ -374,7 +384,45 @@ article a {
     opacity: 1;
   }
 }
-
+@keyframes select {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes display {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+  }
+}
+@keyframes apparition {
+  0% {
+    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
+}
 .imgRestaurant {
   width: 100%;
   margin: 0;
@@ -439,7 +487,37 @@ header .title {
   height: 60px;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  /*
+              &--choice {
 
+  // Refaire avec une DIV pour l'animation rotation
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: transparent;
+                  background-color: $-tertiary;
+                  border-radius: 0 20px 20px 0;
+                  width: 0%;
+                  height: 100%;
+                  transition: width 1000ms;
+                  i {
+                      color: white;
+                  }
+              }
+              &:hover {
+                  .restaurant__menu--plate--choice {
+                 //     animation: select 1000ms ;
+                 //     animation-direction: alternate;
+                      width: 15%;
+                      i {
+                          display: block;
+
+                          animation: rotate 1000ms;
+                      }
+                  }
+              }
+              */
 }
 .restaurant__menu--plate h4, .restaurant__menu--plate h5 {
   margin: 0 0 0 0;
@@ -461,6 +539,7 @@ header .title {
   color: transparent;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
+  width: 0%;
   height: 100%;
   transition: width 1000ms;
 }
@@ -469,10 +548,6 @@ header .title {
 }
 .restaurant__menu--plate:hover .restaurant__menu--plate--choice {
   width: 15%;
-}
-.restaurant__menu--plate:hover .restaurant__menu--plate--choice i {
-  display: block;
-  animation: rotate 1000ms;
 }
 
 .plate_1 {

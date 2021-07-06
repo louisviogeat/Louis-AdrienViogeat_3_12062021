@@ -16,8 +16,16 @@
 }
 
 @keyframes loading {
-  to {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
     transform: rotate(8turn);
+    opacity: 1;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -37,7 +45,7 @@
 }
 
 .home {
-  animation: opacity 5s;
+  animation: opacity 1s;
 }
 
 .loading {
@@ -45,11 +53,12 @@
   justify-content: center;
   &::after {
     content: "";
-    width: 50px;
-    height: 50px;
+    width: 0px;
+    height: 0px;
     border: 10px solid white;
-    border-top-color: green;
+    border-top-color: $-primary;
     border-radius: 50%;
-    animation: loading 5s ease-in-out;
+    animation: loading 1s ease-in-out;
+    opacity: 0;
   }
 }
