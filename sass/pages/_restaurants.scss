@@ -50,7 +50,8 @@ header {
         &:after {
         display: block;
         content: '';
-        border: 2px solid $-tertiary;
+        background-color: $-tertiary;
+        height: 3px;
         width: 15%;
         }
     }
@@ -78,6 +79,7 @@ header {
             height: 60px;
             justify-content: space-between;
             align-items: center;
+            overflow: hidden;
             h4, h5 {
                 margin: 0 0 0 0;
                 font-weight: bold;
@@ -91,19 +93,28 @@ header {
             p {
                 margin-right: 3%;
             }
+            &--choice {
+                
+// Refaire avec une DIV pour l'animation rotation
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: transparent;
+                background-color: $-tertiary;
+                border-radius: 0 20px 20px 0;
+                width: 0%;
+                height: 100%;
+                transition: width 1000ms;
+                i {
+                    color: white;
+                }
+            }
             &:hover {
-                &:after {
-                    display: block;
-                    content: '';
-                    background: url("/images/logo/check-circle-solid.svg") no-repeat;
-                    background-size: 30%;
-                    background-position: 50%;
-                    background-color: $-tertiary;
-                    border: 2px solid $-tertiary;
-                    border-radius: 0 20px 20px 0;
+                .restaurant__menu--plate--choice {
+               //     animation: select 1000ms ;
+               //     animation-direction: alternate;
                     width: 15%;
-                    min-width: 15%;
-                    height: 100%;
+
                 }
             }
             /*

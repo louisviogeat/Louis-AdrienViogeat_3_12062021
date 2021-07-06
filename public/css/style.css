@@ -47,6 +47,35 @@ p {
     opacity: 1;
   }
 }
+
+@keyframes select {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes display {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+  }
+}
+
 @keyframes shadow-drop-center {
   0% {
     background: linear-gradient(#FF79DA, #9356DC);
@@ -57,6 +86,7 @@ p {
     background: #ff93e1;
     -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+
   }
 }
 .btn {
@@ -103,6 +133,33 @@ footer .fas {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes select {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes display {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
   }
 }
 .functionality {
@@ -172,6 +229,33 @@ footer .fas {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes select {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes display {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
   }
 }
 .vignette {
@@ -290,16 +374,7 @@ article a {
     opacity: 1;
   }
 }
-@keyframes apparition {
-  0% {
-    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-    transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-    opacity: 1;
+
   }
 }
 .imgRestaurant {
@@ -337,7 +412,8 @@ header .title {
 .restaurant h3:after {
   display: block;
   content: "";
-  border: 2px solid #99E2D0;
+  background-color: #99E2D0;
+  height: 3px;
   width: 15%;
 }
 .restaurant__title {
@@ -365,6 +441,7 @@ header .title {
   height: 60px;
   justify-content: space-between;
   align-items: center;
+
 }
 .restaurant__menu--plate h4, .restaurant__menu--plate h5 {
   margin: 0 0 0 0;
@@ -379,18 +456,25 @@ header .title {
 .restaurant__menu--plate p {
   margin-right: 3%;
 }
-.restaurant__menu--plate:hover:after {
-  display: block;
-  content: "";
-  background: url("/images/logo/check-circle-solid.svg") no-repeat;
-  background-size: 30%;
-  background-position: 50%;
+.restaurant__menu--plate--choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
   background-color: #99E2D0;
-  border: 2px solid #99E2D0;
   border-radius: 0 20px 20px 0;
-  width: 15%;
-  min-width: 15%;
   height: 100%;
+  transition: width 1000ms;
+}
+.restaurant__menu--plate--choice i {
+  color: white;
+}
+.restaurant__menu--plate:hover .restaurant__menu--plate--choice {
+  width: 15%;
+}
+.restaurant__menu--plate:hover .restaurant__menu--plate--choice i {
+  display: block;
+  animation: rotate 1000ms;
 }
 
 .plate_1 {
@@ -436,6 +520,33 @@ header .title {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes select {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 15%;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes display {
+  0% {
+    display: none;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
   }
 }
 
