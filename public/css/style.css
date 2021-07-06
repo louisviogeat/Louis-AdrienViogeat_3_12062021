@@ -260,7 +260,7 @@ article a {
     background: none;
   }
 }
-body {
+.home {
   animation: opacity 5s;
 }
 
@@ -287,6 +287,18 @@ body {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
     opacity: 1;
   }
 }
@@ -353,29 +365,16 @@ header .title {
   height: 60px;
   justify-content: space-between;
   align-items: center;
-  /*
-  &--choice {
-      background-color: $-tertiary;
-      border-radius: 0 20px 20px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 20%;
-      &:hover {
-          display: flex;
-      }
-      i {
-          color: white;
-      }
-  }
-  */
 }
 .restaurant__menu--plate h4, .restaurant__menu--plate h5 {
   margin: 0 0 0 0;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant__menu--plate--title {
   width: 80%;
+  white-space: nowrap;
 }
 .restaurant__menu--plate p {
   margin-right: 3%;
@@ -390,7 +389,36 @@ header .title {
   border: 2px solid #99E2D0;
   border-radius: 0 20px 20px 0;
   width: 15%;
+  min-width: 15%;
   height: 100%;
+}
+
+.plate_1 {
+  animation: apparition 1000ms;
+}
+.plate_2 {
+  animation: apparition 1500ms;
+}
+.plate_3 {
+  animation: apparition 2000ms;
+}
+.plate_4 {
+  animation: apparition 3000ms;
+}
+.plate_5 {
+  animation: apparition 3500ms;
+}
+.plate_6 {
+  animation: apparition 4000ms;
+}
+.plate_7 {
+  animation: apparition 5000ms;
+}
+.plate_8 {
+  animation: apparition 5500ms;
+}
+.plate_9 {
+  animation: apparition 6000ms;
 }
 
 .command {

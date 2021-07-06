@@ -1,5 +1,20 @@
 @import "../utils/variables";
 
+
+  @keyframes apparition {
+    0% {
+      -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+              transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+      opacity: 1;
+    }
+  }
+  
+
 .imgRestaurant {
     width: 100%;
     margin: 0;
@@ -18,8 +33,6 @@ header {
         grid-template-areas: "a img .";
         margin: 5%;
     }
-    
-    
 }
 
 .restaurant {
@@ -67,9 +80,13 @@ header {
             align-items: center;
             h4, h5 {
                 margin: 0 0 0 0;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             &--title {
                 width: 80%;
+                white-space: nowrap;
             }
             p {
                 margin-right: 3%;
@@ -85,29 +102,73 @@ header {
                     border: 2px solid $-tertiary;
                     border-radius: 0 20px 20px 0;
                     width: 15%;
+                    min-width: 15%;
                     height: 100%;
                 }
             }
-
             /*
             &--choice {
+                
+// Refaire avec une DIV pour l'animation rotation
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: transparent;
                 background-color: $-tertiary;
                 border-radius: 0 20px 20px 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                width: 0%;
                 height: 100%;
-                width: 20%;
-                &:hover {
-                    display: flex;
-                }
+                transition: width 1000ms;
                 i {
                     color: white;
+                }
+            }
+            &:hover {
+                .restaurant__menu--plate--choice {
+               //     animation: select 1000ms ;
+               //     animation-direction: alternate;
+                    width: 15%;
+                    i {
+                        display: block;
+ 
+                        animation: rotate 1000ms;
+                    }
                 }
             }
             */
         }
     }
+}
+
+.plate {
+    &_1 {
+       animation: apparition 1000ms; 
+    }
+    &_2 {
+        animation: apparition 1500ms; 
+    }
+    &_3 {
+        animation: apparition 2000ms; 
+    }
+    &_4 {
+        animation: apparition 3000ms;
+    }
+    &_5 {
+        animation: apparition 3500ms;
+    }
+    &_6 {
+        animation: apparition 4000ms;
+    }
+    &_7 {
+        animation: apparition 5000ms;
+    }
+    &_8 {
+        animation: apparition 5500ms;
+    }
+    &_9 {
+        animation: apparition 6000ms;
+    }
+    
 }
 
 .command {

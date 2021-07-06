@@ -6,6 +6,9 @@
         -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
                 box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
+    1% {
+        background: lighten($color: $-secondary, $amount: 5%);
+    }
     100% {
         background: lighten($color: $-secondary, $amount: 5%);
         -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
@@ -22,7 +25,7 @@
     padding: 0 5% 0 5%;
     font-weight: bold;
     &:hover {
-        animation: shadow-drop-center 400ms;
+        animation: shadow-drop-center 1000ms;
         box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
         background: lighten($-secondary, 5%);
     }

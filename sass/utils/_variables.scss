@@ -16,3 +16,33 @@ $-gradient : linear-gradient($-secondary, $-primary);
         opacity: 1;
     }
 }
+
+@keyframes select {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 15%;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes display {
+    0% {
+        display: none;
+    }
+    1% {
+        display: block;
+    }
+    100% {
+        display: block;
+    }
+}
