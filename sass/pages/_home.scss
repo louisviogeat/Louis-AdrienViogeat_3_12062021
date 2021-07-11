@@ -45,7 +45,7 @@
 }
 
 .home {
-  animation: opacity 1s;
+  animation: opacity 100ms;
 }
 
 .loading {
@@ -58,7 +58,7 @@
     border: 10px solid white;
     border-top-color: $-primary;
     border-radius: 50%;
-    animation: loading 1s ease-in-out;
+    animation: loading 100ms ease-in-out;
     opacity: 0;
   }
 }

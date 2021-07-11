@@ -1,6 +1,5 @@
 @import "../utils/variables";
 
-
   @keyframes apparition {
     0% {
       -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
@@ -13,7 +12,6 @@
       opacity: 1;
     }
   }
-  
 
 .imgRestaurant {
     width: 100%;
@@ -23,15 +21,6 @@
        object-fit: cover; 
        width: 100%;
         margin: 0;
-    }
-}
-
-header {
-    .title {
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr; 
-        grid-template-areas: "a img .";
-        margin: 5%;
     }
 }
 
@@ -88,13 +77,13 @@ header {
             }
             &--title {
                 width: 80%;
-                white-space: nowrap;
+
+                transition: width 1000ms;
             }
             p {
                 margin-right: 3%;
             }
             &--choice {
-                
 // Refaire avec une DIV pour l'animation rotation
                 display: flex;
                 align-items: center;
@@ -115,6 +104,10 @@ header {
                //     animation-direction: alternate;
                     width: 15%;
 
+                }
+                .restaurant__menu--plate--title {
+                    width: 65%;
+                    white-space: nowrap;
                 }
             }
             /*
@@ -151,6 +144,13 @@ header {
     }
 }
 
+@for $i from 1 to 10 {
+    .plate_#{$i} {
+        animation: apparition 1000ms*$i;
+    }
+}
+// faire une boucle for avec i
+/*
 .plate {
     &_1 {
        animation: apparition 1000ms; 
@@ -181,6 +181,7 @@ header {
     }
     
 }
+*/
 
 .command {
     display: flex;

@@ -1,3 +1,70 @@
+@media screen and (min-width: 900px) {
+  #reservation {
+    border: 2px solid blue;
+    height: 10%;
+  }
+  #reservation h2 {
+    margin: 0;
+  }
+  #reservation .btn {
+    height: 50px;
+    border: 1px solid red;
+    padding: 2%;
+  }
+
+  .functionality__list {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid green;
+  }
+  .functionality__list--item::before {
+    opacity: 0;
+  }
+
+  #restaurant {
+    padding: 0;
+    border: 1px solid brown;
+  }
+  #restaurant h2 {
+    margin: 0px;
+    border: 1px solid darkblue;
+  }
+
+  .vignettes {
+    border: 2px solid springgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .vignette {
+    width: 40%;
+  }
+
+  .imgRestaurant {
+    height: 350px;
+  }
+
+  .restaurant {
+    border: 1px solid red;
+  }
+  .restaurant__title h2 {
+    margin: 0;
+  }
+  .restaurant__menu h3 {
+    border: 1px solid rebeccapurple;
+  }
+  .restaurant__menu h3:after {
+    display: block;
+    content: "";
+    background-color: red;
+    height: 3px;
+    width: 15%;
+  }
+  .restaurant__menu--plate {
+    margin-bottom: 0;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("/police/roboto/Roboto-Regular.ttf");
@@ -167,7 +234,7 @@ footer .fas {
   flex-direction: column;
   margin: 0 5% 0 5%;
 }
-.functionality__list {
+.functionality__list--item {
   list-style: none;
   display: flex;
   padding: 20px;
@@ -181,7 +248,7 @@ footer .fas {
   align-items: center;
   background-color: #f8f4ef;
 }
-.functionality__list::before {
+.functionality__list--item::before {
   counter-increment: section;
   content: counter(section);
   text-align: center;
@@ -196,7 +263,7 @@ footer .fas {
   align-items: center;
   justify-content: center;
 }
-.functionality__list:hover {
+.functionality__list--item:hover {
   background-color: #e4d5f6;
 }
 
@@ -208,7 +275,6 @@ footer .fas {
 
 #logo {
   height: 60%;
-  margin-left: 25%;
 }
 
 .subtitle {
@@ -354,7 +420,7 @@ article a {
   }
 }
 .home {
-  animation: opacity 1s;
+  animation: opacity 100ms;
 }
 
 .loading {
@@ -368,7 +434,7 @@ article a {
   border: 10px solid white;
   border-top-color: #9356DC;
   border-radius: 50%;
-  animation: loading 1s ease-in-out;
+  animation: loading 100ms ease-in-out;
   opacity: 0;
 }
 
@@ -432,13 +498,6 @@ article a {
   object-fit: cover;
   width: 100%;
   margin: 0;
-}
-
-header .title {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "a img .";
-  margin: 5%;
 }
 
 .restaurant {
@@ -527,7 +586,7 @@ header .title {
 }
 .restaurant__menu--plate--title {
   width: 80%;
-  white-space: nowrap;
+  transition: width 1000ms;
 }
 .restaurant__menu--plate p {
   margin-right: 3%;
@@ -549,35 +608,79 @@ header .title {
 .restaurant__menu--plate:hover .restaurant__menu--plate--choice {
   width: 15%;
 }
+.restaurant__menu--plate:hover .restaurant__menu--plate--title {
+  width: 65%;
+  white-space: nowrap;
+}
 
 .plate_1 {
   animation: apparition 1000ms;
 }
+
 .plate_2 {
-  animation: apparition 1500ms;
-}
-.plate_3 {
   animation: apparition 2000ms;
 }
-.plate_4 {
+
+.plate_3 {
   animation: apparition 3000ms;
 }
-.plate_5 {
-  animation: apparition 3500ms;
-}
-.plate_6 {
+
+.plate_4 {
   animation: apparition 4000ms;
 }
-.plate_7 {
+
+.plate_5 {
   animation: apparition 5000ms;
 }
-.plate_8 {
-  animation: apparition 5500ms;
-}
-.plate_9 {
+
+.plate_6 {
   animation: apparition 6000ms;
 }
 
+.plate_7 {
+  animation: apparition 7000ms;
+}
+
+.plate_8 {
+  animation: apparition 8000ms;
+}
+
+.plate_9 {
+  animation: apparition 9000ms;
+}
+
+/*
+.plate {
+    &_1 {
+       animation: apparition 1000ms; 
+    }
+    &_2 {
+        animation: apparition 1500ms; 
+    }
+    &_3 {
+        animation: apparition 2000ms; 
+    }
+    &_4 {
+        animation: apparition 3000ms;
+    }
+    &_5 {
+        animation: apparition 3500ms;
+    }
+    &_6 {
+        animation: apparition 4000ms;
+    }
+    &_7 {
+        animation: apparition 5000ms;
+    }
+    &_8 {
+        animation: apparition 5500ms;
+    }
+    &_9 {
+        animation: apparition 6000ms;
+    }
+
+}
+*/
 .command {
   display: flex;
   justify-content: center;
