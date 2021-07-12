@@ -13,6 +13,8 @@
     }
   }
 
+
+
 .imgRestaurant {
     width: 100%;
     margin: 0;
@@ -47,7 +49,6 @@
     &__title {
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
     &__menu {
         display: flex;
@@ -82,9 +83,10 @@
             }
             p {
                 margin-right: 3%;
+                margin-top: 10%;
+                font-weight: bold;
             }
             &--choice {
-// Refaire avec une DIV pour l'animation rotation
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -100,46 +102,17 @@
             }
             &:hover {
                 .restaurant__menu--plate--choice {
-               //     animation: select 1000ms ;
-               //     animation-direction: alternate;
                     width: 15%;
-
+                    i {
+                        display: block;
+                        animation: rotate 1000ms;
+                    }
                 }
                 .restaurant__menu--plate--title {
                     width: 65%;
                     white-space: nowrap;
                 }
             }
-            /*
-            &--choice {
-                
-// Refaire avec une DIV pour l'animation rotation
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: transparent;
-                background-color: $-tertiary;
-                border-radius: 0 20px 20px 0;
-                width: 0%;
-                height: 100%;
-                transition: width 1000ms;
-                i {
-                    color: white;
-                }
-            }
-            &:hover {
-                .restaurant__menu--plate--choice {
-               //     animation: select 1000ms ;
-               //     animation-direction: alternate;
-                    width: 15%;
-                    i {
-                        display: block;
- 
-                        animation: rotate 1000ms;
-                    }
-                }
-            }
-            */
         }
     }
 }
@@ -149,39 +122,6 @@
         animation: apparition 1000ms*$i;
     }
 }
-// faire une boucle for avec i
-/*
-.plate {
-    &_1 {
-       animation: apparition 1000ms; 
-    }
-    &_2 {
-        animation: apparition 1500ms; 
-    }
-    &_3 {
-        animation: apparition 2000ms; 
-    }
-    &_4 {
-        animation: apparition 3000ms;
-    }
-    &_5 {
-        animation: apparition 3500ms;
-    }
-    &_6 {
-        animation: apparition 4000ms;
-    }
-    &_7 {
-        animation: apparition 5000ms;
-    }
-    &_8 {
-        animation: apparition 5500ms;
-    }
-    &_9 {
-        animation: apparition 6000ms;
-    }
-    
-}
-*/
 
 .command {
     display: flex;

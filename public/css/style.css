@@ -174,19 +174,25 @@ p {
 footer {
   background-color: #504f4f;
   color: azure;
+  padding: 5%;
 }
 footer h3 {
   margin-left: 10%;
   margin-top: 0%;
 }
-footer ul {
-  margin: 0;
-}
 footer li {
   list-style: none;
+  padding: 1% 0 0 0;
+}
+footer li span {
+  padding: 1%;
 }
 footer .fas {
   font-size: small;
+  color: white;
+}
+footer a {
+  text-decoration: none;
   color: white;
 }
 
@@ -273,6 +279,15 @@ footer .fas {
   align-items: center;
 }
 
+.header-menu .title a {
+  position: absolute;
+  left: 5%;
+}
+.header-menu .title a i {
+  color: #363636;
+  font-size: large;
+}
+
 #logo {
   height: 60%;
 }
@@ -326,7 +341,7 @@ footer .fas {
   }
 }
 .vignette {
-  height: 300px;
+  height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -338,17 +353,50 @@ footer .fas {
 .vignette__image {
   height: 70%;
   width: 100%;
+  position: relative;
+}
+.vignette__image--photo {
+  height: 200px;
+  width: 100%;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
+  z-index: -1;
+}
+.vignette__image--new {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  background-color: #99E2D0;
+  width: 90px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5%;
+  -webkit-box-shadow: 5px 5px 23px 5px #000000;
+  box-shadow: 5px 5px 23px 5px #000000;
+}
+.vignette__image--new p {
+  color: #278870;
+  font-size: 14px;
+  font-weight: bold;
 }
 .vignette__bottom {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-left: 5%;
   margin-right: 5%;
+  height: 30%;
+}
+.vignette__bottom--text h3 {
+  margin-bottom: 0;
+}
+.vignette__bottom--text p {
+  margin-top: 3%;
 }
 .vignette__bottom--heart {
+  margin-top: 8%;
   margin-right: 5%;
 }
 .vignette__bottom--heart .far, .vignette__bottom--heart .fas {
@@ -524,7 +572,6 @@ article a {
 .restaurant__title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .restaurant__menu {
   display: flex;
@@ -547,36 +594,6 @@ article a {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  /*
-              &--choice {
-
-  // Refaire avec une DIV pour l'animation rotation
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  color: transparent;
-                  background-color: $-tertiary;
-                  border-radius: 0 20px 20px 0;
-                  width: 0%;
-                  height: 100%;
-                  transition: width 1000ms;
-                  i {
-                      color: white;
-                  }
-              }
-              &:hover {
-                  .restaurant__menu--plate--choice {
-                 //     animation: select 1000ms ;
-                 //     animation-direction: alternate;
-                      width: 15%;
-                      i {
-                          display: block;
-
-                          animation: rotate 1000ms;
-                      }
-                  }
-              }
-              */
 }
 .restaurant__menu--plate h4, .restaurant__menu--plate h5 {
   margin: 0 0 0 0;
@@ -590,6 +607,8 @@ article a {
 }
 .restaurant__menu--plate p {
   margin-right: 3%;
+  margin-top: 10%;
+  font-weight: bold;
 }
 .restaurant__menu--plate--choice {
   display: flex;
@@ -607,6 +626,10 @@ article a {
 }
 .restaurant__menu--plate:hover .restaurant__menu--plate--choice {
   width: 15%;
+}
+.restaurant__menu--plate:hover .restaurant__menu--plate--choice i {
+  display: block;
+  animation: rotate 1000ms;
 }
 .restaurant__menu--plate:hover .restaurant__menu--plate--title {
   width: 65%;
@@ -649,38 +672,6 @@ article a {
   animation: apparition 9000ms;
 }
 
-/*
-.plate {
-    &_1 {
-       animation: apparition 1000ms; 
-    }
-    &_2 {
-        animation: apparition 1500ms; 
-    }
-    &_3 {
-        animation: apparition 2000ms; 
-    }
-    &_4 {
-        animation: apparition 3000ms;
-    }
-    &_5 {
-        animation: apparition 3500ms;
-    }
-    &_6 {
-        animation: apparition 4000ms;
-    }
-    &_7 {
-        animation: apparition 5000ms;
-    }
-    &_8 {
-        animation: apparition 5500ms;
-    }
-    &_9 {
-        animation: apparition 6000ms;
-    }
-
-}
-*/
 .command {
   display: flex;
   justify-content: center;
