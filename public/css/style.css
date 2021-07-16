@@ -1,21 +1,14 @@
 @media screen and (min-width: 900px) {
   #reservation {
-    border: 2px solid blue;
     height: 10%;
   }
   #reservation h2 {
     margin: 0;
   }
-  #reservation .btn {
-    height: 50px;
-    border: 1px solid red;
-    padding: 2%;
-  }
 
   .functionality__list {
     display: flex;
     flex-direction: row;
-    border: 2px solid green;
   }
   .functionality__list--item::before {
     opacity: 0;
@@ -23,15 +16,12 @@
 
   #restaurant {
     padding: 0;
-    border: 1px solid brown;
   }
   #restaurant h2 {
     margin: 0px;
-    border: 1px solid darkblue;
   }
 
   .vignettes {
-    border: 2px solid springgreen;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -45,14 +35,8 @@
     height: 350px;
   }
 
-  .restaurant {
-    border: 1px solid red;
-  }
   .restaurant__title h2 {
     margin: 0;
-  }
-  .restaurant__menu h3 {
-    border: 1px solid rebeccapurple;
   }
   .restaurant__menu h3:after {
     display: block;
@@ -61,8 +45,26 @@
     height: 3px;
     width: 15%;
   }
+  .restaurant__menu--list {
+    display: flex;
+  }
   .restaurant__menu--plate {
-    margin-bottom: 0;
+    flex: 3;
+    margin: 0.5%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  footer li {
+    width: 20%;
   }
 }
 @font-face {
@@ -250,7 +252,6 @@ footer a {
   height: 40px;
   margin-left: 0;
   border-radius: 20px;
-  justify-content: space-around;
   align-items: center;
   background-color: #f8f4ef;
 }
@@ -269,8 +270,15 @@ footer a {
   align-items: center;
   justify-content: center;
 }
+.functionality__list--item .fas {
+  margin-left: 5%;
+  margin-right: 20%;
+}
 .functionality__list--item:hover {
   background-color: #e4d5f6;
+}
+.functionality__list--item:hover i {
+  color: #9356DC;
 }
 
 .title {
@@ -578,11 +586,6 @@ article a {
   flex-direction: column;
   justify-content: space-around;
 }
-.restaurant__menu--list {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5%;
-}
 .restaurant__menu--plate {
   display: flex;
   flex-direction: row;
@@ -590,7 +593,7 @@ article a {
   border-radius: 20px;
   margin-bottom: 5%;
   padding: 0 0 0 2%;
-  height: 60px;
+  height: 70px;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
@@ -606,8 +609,7 @@ article a {
   transition: width 1000ms;
 }
 .restaurant__menu--plate p {
-  margin-right: 3%;
-  margin-top: 10%;
+  align-self: flex-end;
   font-weight: bold;
 }
 .restaurant__menu--plate--choice {

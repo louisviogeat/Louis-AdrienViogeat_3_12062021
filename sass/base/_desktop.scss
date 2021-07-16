@@ -1,14 +1,8 @@
 @media screen and (min-width: 900px) {
     #reservation {
-        border: 2px solid blue;
         height: 10%;
         & h2 {
             margin: 0;
-        }
-        & .btn {
-            height: 50px;
-            border: 1px solid red;
-            padding: 2%;
         }
     }
 
@@ -16,7 +10,6 @@
         &__list {
             display: flex;
             flex-direction: row;
-            border: 2px solid green;
             &--item {
                 &::before {
                     opacity: 0;
@@ -27,15 +20,12 @@
 
     #restaurant {
         padding: 0;
-        border: 1px solid brown;
         h2 {
             margin: 0px;
-            border: 1px solid darkblue;
         }
     }
 
     .vignettes {
-        border: 2px solid springgreen;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -49,7 +39,6 @@
     }
 
     .restaurant {
-        border: 1px solid red;
         &__title {
             h2 {
                 margin: 0;
@@ -57,7 +46,6 @@
         }
         &__menu {
             & h3 {
-                border: 1px solid rebeccapurple;
                 &:after {
                     display: block;
                     content: '';
@@ -66,9 +54,30 @@
                     width: 15%;
                 }
             }
+            &--list {
+                display: flex;
+            }
             &--plate {
-                margin-bottom: 0;
+                flex: 3;
+                margin: 0.5%;
             }
         }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+        li {
+            width: 20%;
+
+        }
+
     }
 }
