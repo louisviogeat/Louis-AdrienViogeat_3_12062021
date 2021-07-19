@@ -5,19 +5,19 @@
 .functionality {
     display: flex;
     flex-direction: column;
-    margin: 0 5% 0 5%;
+    margin: 0 5% 15% 5%;
     &__list--item {
         list-style: none;
         display: flex;
         padding: 20px;
-        margin: 10px;
-        box-shadow: 0px 4px 15px 0px #A0A0A0;
+        margin: 20px;
+        box-shadow: 0px 10px 30px 0px  #c5c5c5;
         width: 90%;
         height: 40px;
         margin-left: 0;
         border-radius: 20px;
         align-items: center;
-        background-color: rgb(248, 244, 239);
+        background-color: rgb(240, 240, 240);
         &::before {
             counter-increment: section;
             content: counter(section);
@@ -25,8 +25,8 @@
             background-color: $-primary;
             color: white;
             border-radius: 30px;
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             left: 2%;
             position: absolute;
             display: flex;
@@ -35,7 +35,8 @@
         }
         .fas {
             margin-left: 5%;
-            margin-right: 20%;
+            margin-right: 10%;
+            width: 10%;
         }
         &:hover {
             background-color: lighten($-primary, 30%);

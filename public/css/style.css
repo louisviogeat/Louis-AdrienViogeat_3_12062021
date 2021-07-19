@@ -58,6 +58,9 @@
     flex-direction: column;
     align-items: center;
   }
+  footer h3 {
+    margin-left: 0%;
+  }
   footer ul {
     display: flex;
     width: 100%;
@@ -65,11 +68,18 @@
   }
   footer li {
     width: 20%;
+    flex: 4;
+    display: flex;
+    justify-content: center;
   }
 }
 @font-face {
   font-family: "Roboto";
   src: url("/police/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("/police/roboto/Roboto-Bold.ttf");
 }
 @font-face {
   font-family: "Shrikhand";
@@ -95,8 +105,21 @@ body {
   font-family: "Shrikhand";
 }
 
+h2 {
+  font-family: "Roboto-Bold";
+}
+
 p {
   color: #4e4d4d;
+}
+
+h2, h4 {
+  font-weight: bold;
+}
+
+h5 {
+  font-weight: lighter;
+  color: #5a5a5a;
 }
 
 .fas, .far {
@@ -166,6 +189,7 @@ p {
   background: linear-gradient(#FF79DA, #9356DC);
   padding: 0 5% 0 5%;
   font-weight: bold;
+  font-size: 14px;
 }
 .btn:hover {
   animation: shadow-drop-center 1000ms;
@@ -179,12 +203,16 @@ footer {
   padding: 5%;
 }
 footer h3 {
-  margin-left: 10%;
   margin-top: 0%;
+  font-weight: lighter;
+}
+footer ul {
+  padding-inline-start: 0;
 }
 footer li {
   list-style: none;
   padding: 1% 0 0 0;
+  margin: 0;
 }
 footer li span {
   padding: 1%;
@@ -240,20 +268,20 @@ footer a {
 .functionality {
   display: flex;
   flex-direction: column;
-  margin: 0 5% 0 5%;
+  margin: 0 5% 15% 5%;
 }
 .functionality__list--item {
   list-style: none;
   display: flex;
   padding: 20px;
-  margin: 10px;
-  box-shadow: 0px 4px 15px 0px #A0A0A0;
+  margin: 20px;
+  box-shadow: 0px 10px 30px 0px #c5c5c5;
   width: 90%;
   height: 40px;
   margin-left: 0;
   border-radius: 20px;
   align-items: center;
-  background-color: #f8f4ef;
+  background-color: #f0f0f0;
 }
 .functionality__list--item::before {
   counter-increment: section;
@@ -262,8 +290,8 @@ footer a {
   background-color: #9356DC;
   color: white;
   border-radius: 30px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   left: 2%;
   position: absolute;
   display: flex;
@@ -272,7 +300,8 @@ footer a {
 }
 .functionality__list--item .fas {
   margin-left: 5%;
-  margin-right: 20%;
+  margin-right: 10%;
+  width: 10%;
 }
 .functionality__list--item:hover {
   background-color: #e4d5f6;
@@ -283,8 +312,13 @@ footer a {
 
 .title {
   height: 50px;
-  display: flex;
   align-items: center;
+  padding: 5px;
+}
+
+header .fas {
+  font-size: medium;
+  color: black;
 }
 
 .header-menu .title a {
@@ -292,7 +326,7 @@ footer a {
   left: 5%;
 }
 .header-menu .title a i {
-  color: #363636;
+  color: #7b7b7c;
   font-size: large;
 }
 
@@ -302,7 +336,8 @@ footer a {
 
 .subtitle {
   align-items: center;
-  background-color: #e7e0da;
+  background-color: #e8e8e8;
+  box-shadow: inset 0px 3px 5px #d0cece;
 }
 
 #localisationLogo {
@@ -399,6 +434,7 @@ footer a {
 }
 .vignette__bottom--text h3 {
   margin-bottom: 0;
+  font-family: "Roboto-Bold";
 }
 .vignette__bottom--text p {
   margin-top: 3%;
@@ -436,16 +472,20 @@ article a {
   justify-content: center;
   align-items: center;
   padding: 5% 10%;
-  background-color: #f8f4ef;
+  background-color: #f0f0f0;
   text-align: center;
+}
+#reservation h2 {
+  margin-block-end: 0;
+  margin: 20px 20px 0 20px;
+}
+#reservation p {
+  margin-block-end: 1.5em;
 }
 
 #restaurant {
   background-color: #e7e5e4;
-  padding: 5%;
-}
-#restaurant h2 {
-  margin: 5%;
+  padding: 1% 5% 1%;
 }
 
 @keyframes loading {
@@ -533,6 +573,60 @@ article a {
     display: block;
   }
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("/police/roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("/police/roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/police/shrikhand/Shrikhand-Regular.otf");
+}
+img {
+  object-fit: cover;
+}
+
+.title, .subtitle, #reservation {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  font-family: "Roboto";
+  counter-reset: section;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.logo, .title {
+  font-family: "Shrikhand";
+}
+
+h2 {
+  font-family: "Roboto-Bold";
+}
+
+p {
+  color: #4e4d4d;
+}
+
+h2, h4 {
+  font-weight: bold;
+}
+
+h5 {
+  font-weight: lighter;
+  color: #5a5a5a;
+}
+
+.fas, .far {
+  font-size: x-large;
+  color: #777676;
+}
+
 @keyframes apparition {
   0% {
     -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
@@ -557,15 +651,17 @@ article a {
 }
 
 .restaurant {
-  background-color: #f1f1f1;
+  background-color: #f0f0f0;
   border-radius: 30px;
   margin-top: -30px;
   position: relative;
   z-index: 1;
-  padding: 5%;
+  padding: 0 5% 5% 5%;
 }
 .restaurant h2 {
   font-weight: normal;
+  font-size: 27px;
+  margin-top: 10px;
 }
 .restaurant h3 {
   text-transform: uppercase;
@@ -575,7 +671,7 @@ article a {
   content: "";
   background-color: #99E2D0;
   height: 3px;
-  width: 15%;
+  width: 12%;
 }
 .restaurant__title {
   display: flex;
@@ -585,6 +681,9 @@ article a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.restaurant__menu h3 {
+  font-weight: lighter;
 }
 .restaurant__menu--plate {
   display: flex;
@@ -599,8 +698,7 @@ article a {
   overflow: hidden;
 }
 .restaurant__menu--plate h4, .restaurant__menu--plate h5 {
-  margin: 0 0 0 0;
-  font-weight: bold;
+  margin: 5px 0 0 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }

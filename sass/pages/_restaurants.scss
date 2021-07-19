@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../base/reset";
 
   @keyframes apparition {
     0% {
@@ -27,14 +28,16 @@
 }
 
 .restaurant {
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(240, 240, 240);
     border-radius: 30px;
     margin-top: -30px;
     position: relative;
     z-index: 1;
-    padding: 5%;
+    padding: 0 5% 5% 5%;
     h2 {
         font-weight: normal;
+        font-size: 27px;
+        margin-top: 10px;
     }
     & h3 {
         text-transform: uppercase;
@@ -43,7 +46,7 @@
         content: '';
         background-color: $-tertiary;
         height: 3px;
-        width: 15%;
+        width: 12%;
         }
     }
     &__title {
@@ -54,6 +57,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        h3 {
+            font-weight: lighter;
+        }
         &--plate {
             display: flex;
             flex-direction: row;
@@ -66,8 +72,7 @@
             align-items: center;
             overflow: hidden;
             h4, h5 {
-                margin: 0 0 0 0;
-                font-weight: bold;
+                margin: 5px 0 0 0;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }

@@ -4,13 +4,16 @@ footer {
     padding: 5%;
 
     h3 {
-        margin-left: 10%;
         margin-top: 0%;
+        font-weight: lighter;
     }
-
+    ul {
+        padding-inline-start: 0;
+    }
     li {
         list-style: none;
         padding: 1% 0 0 0;
+        margin: 0;
         span {
             padding: 1%;
         }

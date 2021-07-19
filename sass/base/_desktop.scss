@@ -68,7 +68,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        h3 {
+            margin-left: 0%;
+        }
         ul {
             display: flex;
             width: 100%;
@@ -76,6 +78,9 @@
         }
         li {
             width: 20%;
+            flex: 4;
+            display: flex;
+            justify-content: center;
 
         }
 
