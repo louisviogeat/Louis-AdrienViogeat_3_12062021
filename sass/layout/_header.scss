@@ -8,6 +8,8 @@ header {
     .fas {
         font-size: medium;
         color: black;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -32,6 +34,13 @@ header {
     align-items: center;
     background-color: rgb(232, 232, 232);
     box-shadow: inset 0px 3px 5px #d0cece;
+    height: 50px;
+    input {
+        border: none;
+        background-color: unset;
+        font-size: large;
+        width: 120px;
+    }
 }
 
 #localisationLogo {
