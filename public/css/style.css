@@ -290,10 +290,12 @@ header .fas {
 .header-menu .title a {
   position: absolute;
   left: 5%;
+  text-decoration: none;
 }
 .header-menu .title a i {
   color: #7b7b7c;
   font-size: large;
+  border: none;
 }
 
 #logo {
@@ -769,7 +771,7 @@ h5 {
   }
   .functionality__list--item::before {
     position: relative;
-    left: -10%;
+    left: 0%;
   }
 
   #restaurant {
