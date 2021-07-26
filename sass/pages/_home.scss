@@ -49,7 +49,7 @@
 }
 
 .home {
-  animation: opacity 100ms;
+  animation: opacity 3000ms;
 }
 
 .loading {
@@ -62,7 +62,7 @@
     border: 10px solid white;
     border-top-color: $-primary;
     border-radius: 50%;
-    animation: loading 100ms ease-in-out;
+    animation: loading 3000ms ease-in-out;
     opacity: 0;
   }
 }
